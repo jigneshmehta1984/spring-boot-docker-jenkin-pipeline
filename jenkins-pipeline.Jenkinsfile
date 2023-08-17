@@ -2,7 +2,7 @@ pipeline {
     agent any
 	
     stages {
-	    stage('Checkout Code"') {
+	    stage('Checkout"') {
 			steps {
 				checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/jigneshmehta1984/spring-boot-docker.git']]]
 			}
